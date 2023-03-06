@@ -1,0 +1,623 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+header{
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 200px;
+  transition: 0.5s ease;
+}
+
+header .brand{
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+header .navigation{
+  position: relative;
+}
+
+header .navigation .navigation-items a{
+  position: relative;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 30px;
+  transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:before{
+  content: '';
+  position: absolute;
+  background: #fff;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:hover:before{
+  width: 100%;
+}
+
+section{
+  padding: 100px 200px;
+}
+
+.home{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #2696E9;
+}
+.home .waves {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  z-index: 888;
+transform: rotate(180deg);
+}
+
+
+.home:before{
+  z-index: 777;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.home .content{
+  z-index: 888;
+  color: #fff;
+  width: 70%;
+  margin-top: 50px;
+  display: none;
+  margin-left: 50px;
+}
+
+.home .content.active{
+  display: block;
+}
+
+.home .content h1{
+  font-size: 4em;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 75px;
+  margin-bottom: 40px;
+
+}
+
+.home .content h1 span{
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.home .content p{
+  margin-bottom: 65px;
+}
+
+.home .content a{
+  background: #fff;
+  padding: 15px 35px;
+  color: #1680AC;
+  font-size: 1.1em;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.home .media-icons{
+  z-index: 888;
+  position: absolute;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s ease;
+}
+
+.home .media-icons a{
+  color: #fff;
+  font-size: 1.6em;
+  transition: 0.3s ease;
+}
+
+.home .media-icons a:not(:last-child){
+  margin-bottom: 20px;
+}
+
+.home .media-icons a:hover{
+  transform: scale(1.3);
+}
+
+.home video{
+  z-index: 000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-navigation{
+  z-index: 888;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(80px);
+  margin-bottom: 12px;
+}
+
+.slider-navigation .nav-btn{
+  width: 12px;
+  height: 12px;
+  background: black;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+  transition: 0.3s ease;
+}
+
+.slider-navigation .nav-btn.active{
+  background: #2696E9;
+}
+
+.slider-navigation .nav-btn:not(:last-child){
+  margin-right: 20px;
+}
+
+.slider-navigation .nav-btn:hover{
+  transform: scale(1.2);
+}
+
+.video-slide{
+  position: absolute;
+  width: 100%;
+  clip-path: circle(0% at 0 50%);
+}
+
+.video-slide.active{
+  clip-path: circle(150% at 0 50%);
+  transition: 2s ease;
+  transition-property: clip-path;
+}
+
+
+
+
+      /* About */
+
+      #About{
+        background-color: black;
+        margin-top: 0;
+        position: relative;
+        text-align: center;
+        color: white;
+      }
+      #About img{
+        width: 135%;
+      }
+      #About .midtext{
+        margin : 80px auto;
+      }
+      #About .abouttext{
+        margin-top: 12.5%;
+      }
+      #About .subimg {
+        width: 105%;
+      }
+      #About .waves {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        z-index: 888;
+      transform: rotate(180deg);
+      }
+
+     /* services */
+      #services{
+        background-color: #030125;
+        margin-top: 0;
+        position: relative;
+        text-align: center;
+        color: white;
+
+
+      }
+      #services h1 {
+        font-size: 3em;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        line-height: 75px;
+        margin-bottom: 40px;
+      }
+
+      #services ul {
+        text-align: left;
+      }
+
+      #services .card{
+        background-color: #030125;
+background-image: linear-gradient(43deg, #030125 0%, #080831 46%, #050590 100%);
+
+        /* filter: grayscale(30%); */
+        border-color: gray;
+        margin: 10% 0 10% 0;
+        text-align: center;
+
+
+
+      }
+
+      #services i {
+        font-size: 3rem;
+        margin-top: 15px;
+      }
+      #services .row{
+        margin-bottom: 100px;
+      }
+      #services img{
+        width: 150px;
+        height: 150px;
+        margin: 15px auto;
+
+      }
+      #services .waves {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        z-index: 888;
+      transform: rotate(180deg);
+      }
+      #services .card p {
+text-align: center;
+font-weight: lighter;
+font-size: 1rem;
+        }
+
+        .hidden {
+        visibility: hidden;
+        }
+        #services .card h5 {
+          margin-bottom: 15px;
+        }
+        #services .endtext {
+          margin-bottom: 15px;
+          padding-bottom: 5.5rem;
+        }
+
+       /* whyus */
+
+       #whyus{
+         background-color: black;
+         margin-top: 0;
+         position: relative;
+         text-align: center;
+         color: white;
+       }
+
+              #whyus .waves {
+                position: absolute;
+                bottom:  0;
+                width: 100%;
+                left: 0;
+                z-index: 888;
+                transform: rotate(180deg);
+
+              }
+       #whyus h1  {
+         margin-bottom: 50px;
+       }
+       #whyus h3  {
+         margin-top: 100px;
+       }
+
+
+       #whyus img {
+        width: 150px;
+        height: 150px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+       }
+
+       #testimonials{
+         background-color: black;
+         text-align: center;
+         color: white;
+         padding-top: 0;
+         margin-top: 0;
+
+       }
+       .testimonials-text{
+         font-size: 2rem;
+         line-height: 1.5;
+         margin: 100px auto;
+
+       }
+       .testimonials-img{
+         width: 5%;
+         border-radius: 100%;
+         margin: 30px;
+       }
+
+       .carousel-item{
+         padding: 0% 15%;
+
+       }
+
+       /* howtoconact */
+
+       #howtoconact{
+         background-color: #030125;
+         margin-top: 0;
+         position: relative;
+         text-align: center;
+         color: white;
+       }
+
+       #howtoconact .waves {
+         position: absolute;
+         bottom: 0;
+         width: 100%;
+         left: 0;
+         z-index: 888;
+         transform: rotate(180deg);
+
+       }
+       #howtoconact .abouttext{
+         margin-top: 12.5%;
+       }
+       #howtoconact .subimg {
+         width: 105%;
+       }
+       #howtoconact .col {
+         margin-bottom: 100px;
+       }
+
+       /* contact */
+
+       #contact{
+         background-color: black;
+         margin-top: 0;
+         position: relative;
+         text-align: center;
+         color: white;
+       }
+
+       #contact i {
+         font-size: 35px;
+         margin: 53px auto;
+       }
+       #contact i:hover {
+         font-size: 45px;
+         color: #030125;
+         margin-bottom: 0;
+       }
+
+       #contact .container {
+         margin: 100px  auto;
+       }
+       #contact .container .formm {
+         margin: 35px  auto;
+       }
+      #contact .btn {
+        margin-top: 15px;
+      }
+
+@media (max-width: 1440px){
+
+  #About img{
+    width: 120%;
+  }
+  #About .abouttext h1 {
+    font-size: 2.5rem;
+  }
+  #About .abouttext h3 {
+    font-size: 1.5rem;
+  }
+  #About .midtext {
+    margin : 60px auto;
+    font-size: 1.3rem;
+  }
+  #About .abouttext {
+    margin-top: 8.5%;
+  }
+
+  #About h1{
+    margin-bottom: 50px;
+  }
+
+  #whyus h1{
+    font-weight: normal;
+  }
+
+  #whyus img{
+    width: 100px;
+    height: 100px;
+    margin: 35px auto;
+  }
+
+  #whyus h4{
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  #whyus h3{
+    font-weight: normal;
+    font-size: 1.5rem;
+  }
+  .testimonials-text{
+    font-size:1.3rem;
+
+  }
+  .carousel-item{
+    padding: 0 7%;
+    margin: 0;
+
+  }
+  .carousel{
+    margin : 0;
+    padding: 0;
+  }
+  #testimonials{
+    padding: 0;
+    margin: 0;
+  }
+  .carousel-control-prev{
+    margin-right: 150px;
+  }
+  .testimonials-img{
+    width: 2%;
+    border-radius: 100%;
+    margin: 15px;
+  }
+
+  #howtoconact h1 {
+    margin-bottom: 50px;
+  }
+
+  #howtocontact h5 {
+    margin-top: 0;
+  }
+
+}
+
+
+@media (max-width: 1024px){
+  header{
+    padding: 12px 20px;
+  }
+
+  section{
+    padding: 100px 20px;
+  }
+
+  .home .media-icons{
+    right: 15px;
+  }
+
+  header .navigation{
+    display: none;
+  }
+
+  header .navigation.active{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(1, 1, 1, 0.5);
+  }
+
+  header .navigation .navigation-items a{
+    color: #222;
+    font-size: 1.2em;
+    margin: 20px;
+  }
+
+  header .navigation .navigation-items a:before{
+    background: #222;
+    height: 5px;
+  }
+
+  header .navigation.active .navigation-items{
+    background: #fff;
+    width: 600px;
+    max-width: 600px;
+    margin: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+  }
+
+  .menu-btn{
+    background: url(menu.png)no-repeat;
+    background-size: 30px;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  .menu-btn.active{
+    z-index: 999;
+    background: url(close.png)no-repeat;
+    background-size: 25px;
+    background-position: center;
+    transition: 0.3s ease;
+  }
+
+  #About{
+  }
+
+  #About .abouttext {
+  }
+}
+@media (max-width: 768px){
+
+}
+
+@media (max-width: 560px){
+  .home .content h1{
+    font-size: 3em;
+    line-height: 60px;
+  }
+  #howtoconact .subimg{
+    display: none;
+  }
+  #howtoconact  .H{
+    width: 105%;
+    margin-bottom:50px;
+  }
+
+  #About .mainimg {
+    display: none;
+  }
+  #About .subimg{
+    display: none;
+  }
+  #About .H {
+    width: 105%;
+    margin-bottom:50px;
+  }
+
+
+
+
+}
